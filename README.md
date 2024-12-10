@@ -1,8 +1,8 @@
 ![Tec de Monterrey](images/logotecmty.png)
-# Act 2.1 - Implementación en equipo de un ADT de estructura de datos lineales
+# Act 2.1 - Team Implementation of a Linear Data Structure ADT
 
-## <span style="color: rgb(26, 99, 169);">¿Qué tengo que hacer?</span>
-En este repositorio encontrarás el archivo "list.h" que deberás modificar para el desarrollo de esta actividad. Deberás colocar en la parte superior, en comentarios, tus datos. Por ejemplo:
+## <span style="color: rgb(26, 99, 169);">What Do I Have to Do?</span>
+In this repository, you will find the file "list.h," which you must modify to develop this activity. At the top of the file, include your personal information in comments. For example:
 ```
 // =========================================================
 // File: list.h
@@ -11,153 +11,146 @@ En este repositorio encontrarás el archivo "list.h" que deberás modificar para
 // =========================================================
 ```
 
-Diseña e implementa, de forma <span style="text-decoration-line: underline;">forma individual</span>, siguiendo la especificación de la interfaz para un ADT que represente una estructura de datos lineal:
 
-Dependiendo del ADT de estructura de datos lineal deberán implementar las operaciones CRUD (Create, Read (buscar), Update, Delete) elementos en la estructura de datos. Algunas operaciones no aplican para ciertas estructura de datos.
+Individually design and implement, following the interface specification, an ADT that represents a linear data structure:
 
-<table style="height: 10px; width: 0%; border-collapse: collapse; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;" border="1">
-<tbody>
-<tr style="height: 24px;">
-<td style="width: 30%; height: 10px; background-color: rgb(25, 99, 169);" rowspan="5"><span style="font-size: 18pt; color: rgb(255, 255, 255);">insert_at (create)</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Descripción</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">
-Agrega un elemento en *index* (0 <= *index* <= *size*). El elemento que estaba en esa posición se desplaza hacia la derecha.
-</td>
+Depending on the linear data structure ADT, you must implement CRUD (Create, Read, Update, Delete) operations for elements in the data structure. Some operations may not apply to certain data structures.
+
+<table style="border-collapse: collapse; border: 1px solid;">
+<thead>
+<tr style="background-color: rgb(25, 99, 169);">
+<th style="color: white;" rowspan="5">insert_at (create)</th>
+<th>Description</th>
+<th>Adds an element at *index* (0 <= *index* <= *size*). The element previously at that position is shifted to the right.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Entrada</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">*val*, valor a ser insertado y la posición, *index*, en que se insertará.</td>
+<tr>
+<th>Input</th>
+<th>*val*, the value to be inserted, and *index*, the position where it will be inserted.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Salida</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">Estructura de datos valida mostrando la inserción del elemento. Si la posición es inválida, deberá arrojar una excepción.</td>
+<tr>
+<th>Output</th>
+<th>Valid data structure showing the insertion of the element. If the position is invalid, an exception must be thrown.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Precondición</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Una estructura válida.</span></td>
+<tr>
+<th>Precondition</th>
+<th>A valid structure.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 10px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Postcondición</span></td>
-<td style="width: 0px; height: 10px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Estructura modificada.</span></td>
+<tr>
+<th>Postcondition</th>
+<th>Modified structure.</th>
 </tr>
-</tbody>
+</thead>
 </table>
 
 <br>
 
-<table style="height: 10px; width: 0%; border-collapse: collapse; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;" border="1">
-<tbody>
-<tr style="height: 24px;">
-<td style="width: 30%; height: 10px; background-color: rgb(25, 99, 169);" rowspan="5"><span style="font-size: 18pt; color: rgb(255, 255, 255);">get (read)</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Descripción</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">
-Regresa el elemento que está en la posición indicada por *index* (0 <= *index* < *size*).
-</td>
+<table style="border-collapse: collapse; border: 1px solid;">
+<thead>
+<tr style="background-color: rgb(25, 99, 169);">
+<th style="color: white;" rowspan="5">get (read)</th>
+<th>Description</th>
+<th>Returns the element at the position specified by *index* (0 <= *index* < *size*).</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Entrada</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">La posición, *index*, del elemento requerido.</td>
+<tr>
+<th>Input</th>
+<th>The position, *index*, of the required element.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Salida</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">Elemento que se encuentra en la posición indicada. Si la posición es inválida, deberá arrojar una excepción.</td>
+<tr>
+<th>Output</th>
+<th>The element at the specified position. If the position is invalid, an exception must be thrown.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Precondición</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Una estructura válida.</span></td>
+<tr>
+<th>Precondition</th>
+<th>A valid structure.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 10px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Postcondición</span></td>
-<td style="width: 0px; height: 10px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Nada.</span></td>
-</tbody>
+<tr>
+<th>Postcondition</th>
+<th>None.</th>
+</tr>
+</thead>
 </table>
 
 <br>
 
-<table style="height: 10px; width: 0%; border-collapse: collapse; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;" border="1">
-<tbody>
-<tr style="height: 24px;">
-<td style="width: 30%; height: 10px; background-color: rgb(25, 99, 169);" rowspan="5"><span style="font-size: 18pt; color: rgb(255, 255, 255);">indexOf</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Descripción</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">
-Regresa la posición en que se encuentra el elemento *val*.
-</td>
+<table style="border-collapse: collapse; border: 1px solid;">
+<thead>
+<tr style="background-color: rgb(25, 99, 169);">
+<th style="color: white;" rowspan="5">indexOf</th>
+<th>Description</th>
+<th>Returns the position of the element *val*.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Entrada</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">El elemento a buscar.</td>
+<tr>
+<th>Input</th>
+<th>The element to search for.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Salida</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">La posición del elemento buscado. Si el elemento no se encuentra, regresa -1.</td>
+<tr>
+<th>Output</th>
+<th>The position of the searched element. If the element is not found, returns -1.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Precondición</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Estructura de datos válida</span></td>
+<tr>
+<th>Precondition</th>
+<th>A valid data structure.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 10px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Postcondición</span></td>
-<td style="width: 0px; height: 10px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Nada</span></td>
+<tr>
+<th>Postcondition</th>
+<th>None.</th>
 </tr>
-</tbody>
+</thead>
 </table>
 
 <br>
 
-<table style="height: 10px; width: 0%; border-collapse: collapse; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;" border="1">
-<tbody>
-<tr style="height: 24px;">
-<td style="width: 30%; height: 10px; background-color: rgb(25, 99, 169);" rowspan="5"><span style="font-size: 18pt; color: rgb(255, 255, 255);">remove_at (del)</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Descripción</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">
-Elimina el elemento que se encuentra en *index* (0 <= *index* < *size*).
-</td>
+<table style="border-collapse: collapse; border: 1px solid;">
+<thead>
+<tr style="background-color: rgb(25, 99, 169);">
+<th style="color: white;" rowspan="5">remove_at (del)</th>
+<th>Description</th>
+<th>Removes the element at *index* (0 <= *index* < *size*).</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Entrada</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">La posición, *index*, del elemento a eliminar.</td>
+<tr>
+<th>Input</th>
+<th>The position, *index*, of the element to remove.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Salida</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">Elemento que se encuentra en la posición indicada. Si la posición es inválida, deberá arrojar una excepción.</td>
+<tr>
+<th>Output</th>
+<th>The element at the specified position. If the position is invalid, an exception must be thrown.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Precondición</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Estructura de datos válida</span></td>
+<tr>
+<th>Precondition</th>
+<th>A valid data structure.</th>
 </tr>
-<tr style="height: 24px;">
-<td style="width: 0px; height: 10px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Postcondición</span></td>
-<td style="width: 0px; height: 10px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Estructura de datos debidamente actualizada</span></td>
+<tr>
+<th>Postcondition</th>
+<th>Properly updated data structure.</th>
 </tr>
-</tbody>
+</thead>
 </table>
 
-<br>Todas las funcionalidades deberán de estar correctamente alineadas y documentadas.&nbsp; Recuerda que todas las funcionalidades deberán pasar exitosamente todas las pruebas. Como parte de la documentación deberá incluirse la complejidad de cada una de ellas.
+<br>
+All functionalities must be correctly aligned and documented. Additionally, all functionalities must pass all tests successfully. As part of the documentation, include the complexity of each functionality.
 
-Para probar tu implementación, ejecuta el comando:
+To test your implementation, execute the command:
 ```
 make
 ```
-Este comando compilará tu código y generará una serie de archivos de pruebas llamados "runTest#", donde # será un número de prueba. Para ejecutar prueba, solo deberás ejecutar el archivos correcto. Por ejemplo, si quiere revisar si mi código cumple con la prueba número 3, deberías ejecutar:
+This command will compile your code and generate a series of test files called "runTest#", where # is the test number. To execute a test, run the appropriate file. For example, to check if your code meets test number 3, you should run:
 ```
 ./runTest3
 ```
 
-## <span style="color: rgb(26, 99, 169);">**¿Bajo qué criterios se evalúa mi evidencia?**</span>
+## <span style="color: rgb(26, 99, 169);">**How Is My Evidence Evaluated?**</span>
 
-- **80%** - Para cada una de las funcionalidades se evaluará:
+- **80%** - For each functionality, the evaluation will be:
+    - **Excellent (80%)** - correctly passes all test cases.
+    - **Very Good (60%)** - correctly passes 75% of test cases.
+    - **Good (40%)** - correctly passes 50% of test cases.
+    - **Insufficient (20%)** - correctly passes less than 50% of test cases.
 
-    - **Excelente (80%)** - pasa correctamente todos los casos de prueba.
-    - **Muy Bien (60%)** - pasa correctamente el 75% de los casos de prueba.
-    - **Bien (40%)** - pasa correctamente el 50% de los casos de prueba.
-    - **Insuficiente (20%)** - pasa correctamente menos del 50% de los casos de prueba.
+- **10%** - The code must follow the coding standards specified in the document: <span class="instructure_file_holder link_holder">[coding_standard_link](estandar.pdf)</span>.
+- **10%** - Function names in the application must be respected.
 
+## <span style="color: rgb(26, 99, 169);">**How Do I Submit It?**</span>
+Create a ZIP file of your repository. Ensure that all necessary files are included.
 
-- **10%** - El código deberá seguir los lineamientos estipulados en el estándar de codificación: <span class="instructure_file_holder link_holder">[liga_estándar_codificación](estandar.pdf)</span>
-- **10%** - Se respetan los nombres de las funciones en la aplicación.
-
-## <span style="color: rgb(26, 99, 169);">**¿Cómo la entrego?**</span>
-Crea un archivo Zip de tu repositorio. Asegúrate de que todos los archivos estén incluidos.
-
-## <span style="color: rgb(26, 99, 169);">**¿Dónde la entrego?**</span>
-Sube el archivo en el espacio definido para esta actividad en Canvas.
+## <span style="color: rgb(26, 99, 169);">**Where Do I Submit It?**</span>
+Upload the file in the space provided for this activity on Canvas.
